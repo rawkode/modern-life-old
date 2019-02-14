@@ -2,7 +2,7 @@
 template: post
 title: 'SRE Playbook: Freeing Up Disk Space'
 slug: sre-playbook-freeing-up-disk-space
-draft: true
+draft: false
 date: 2018-09-13T17:39:06.416Z
 description: >-
   As a Site Reliability Engineer, I need to perform maintenance of machines a
