@@ -1,30 +1,30 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
-import Post from '../components/Post';
+import Article from '../components/Article';
 
-const PostTemplate = ({ data }) => {
+const ArticleTemplate = ({ data }) => {
   const {
     title: siteTitle,
     subtitle: siteSubtitle
   } = data.site.siteMetadata;
 
   const {
-    title: postTitle,
-    description: postDescription
+    title: articleTitle,
+    description: articleDescription
   } = data.markdownRemark.frontmatter;
 
-  const metaDescription = postDescription !== null ? postDescription : siteSubtitle;
+  const metaDescription = articleDescription !== null ? articleDescription : siteSubtitle;
 
   return (
-    <Layout title={`${postTitle} - ${siteTitle}`} description={metaDescription}>
-      <Post post={data.markdownRemark} />
+    <Layout title={`${articleTitle} - ${siteTitle}`} description={metaDescription}>
+      <Article article={data.markdownRemark} />
     </Layout>
   );
 };
 
 export const query = graphql`
-  query PostBySlug($slug: String!) {
+  query ArticleBySlug($slug: String!) {
     site {
       siteMetadata {
         author {
@@ -55,4 +55,4 @@ export const query = graphql`
   }
 `;
 
-export default PostTemplate;
+export default ArticleTemplate;

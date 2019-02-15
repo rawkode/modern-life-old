@@ -1,4 +1,4 @@
-/** 
+/**
  * Variables
  */
 
@@ -13,7 +13,15 @@ $color-gray-border: lighten($color-base, 77%);
 $color-gray-bg: lighten($color-base, 79%);
 
 // Typographic
-$typographic-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$typographic-font-family: -apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+Oxygen-Sans,
+Ubuntu,
+Cantarell,
+"Helvetica Neue",
+sans-serif;
 
 $typographic-root-font-size: 100;
 $typographic-base-font-size: 16px;
@@ -32,8 +40,8 @@ $button-height: 35px;
 $button-border-radius: 20px;
 
 // Layout
-$layout-post-single-width: 945px;
-$layout-post-width: $layout-post-single-width - 305px;
+$layout-article-single-width: 945px;
+$layout-article-width: $layout-article-single-width - 305px;
 
 $layout-width: 1070px;
 $layout-breakpoint-sm: 685px;

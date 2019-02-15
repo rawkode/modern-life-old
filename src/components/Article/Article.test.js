@@ -1,10 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Post from './Post';
+import Article from './Article';
 
-describe('Post', () => {
+describe('Article', () => {
   const props = {
-    post: {
+    article: {
       html: '<p>test</p>',
       fields: {
         tagSlugs: [
@@ -24,7 +24,7 @@ describe('Post', () => {
   };
 
   it('renders correctly', () => {
-    const tree = renderer.create(<Post {...props} />).toJSON();
+    const tree = renderer.create(<Article {...props} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

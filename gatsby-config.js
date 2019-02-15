@@ -64,7 +64,7 @@ module.exports = {
                 allMarkdownRemark(
                   limit: 1000,
                   sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
+                  filter: { frontmatter: { template: { eq: "article" }, draft: { ne: true } } }
                 ) {
                   edges {
                     node {

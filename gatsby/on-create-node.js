@@ -4,6 +4,8 @@ const _ = require('lodash');
 const { createFilePath } = require('gatsby-source-filesystem');
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 
+const moment = require('moment');
+
 const onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
@@ -11,11 +13,23 @@ const onCreateNode = ({ node, actions, getNode }) => {
 
   if (node.internal.type === 'MarkdownRemark') {
     if (typeof node.frontmatter.slug !== 'undefined') {
-      createNodeField({
-        node,
-        name: 'slug',
-        value: node.frontmatter.slug
-      });
+      switch (node.frontmatter.template) {
+        case 'article':
+          createNodeField({
+            node,
+            name: 'slug',
+            value: `/${moment(node.frontmatter.date).format('YYYY/MM/DD')}/${node.frontmatter.slug}/`,
+          });
+          break;
+
+        default:
+          createNodeField({
+            node,
+            name: 'slug',
+            value: node.frontmatter.slug,
+          });
+          break;
+      }
     } else {
       const value = createFilePath({ node, getNode });
       createNodeField({

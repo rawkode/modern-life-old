@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import ReactDisqusComments from 'react-disqus-comments';
 
-export const PureComments = ({ data, postTitle, postSlug }) => {
+export const PureComments = ({ data, articleTitle, articleSlug }) => {
   const {
     siteUrl,
     disqusShortname
@@ -15,9 +15,9 @@ export const PureComments = ({ data, postTitle, postSlug }) => {
   return (
     <ReactDisqusComments
       shortname={disqusShortname}
-      identifier={postTitle}
-      title={postTitle}
-      url={siteUrl + postSlug}
+      identifier={articleTitle}
+      title={articleTitle}
+      url={siteUrl + articleSlug}
     />
   );
 };

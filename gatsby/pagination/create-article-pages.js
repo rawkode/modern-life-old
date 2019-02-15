@@ -9,13 +9,15 @@ module.exports = async (graphql, actions) => {
   const result = await graphql(`
     {
       allMarkdownRemark(
-        filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
+        filter: { frontmatter: { template: { eq: "article" }, draft: { ne: true } } }
       ) { totalCount }
     }
   `);
 
-  const { postsPerPage } = siteConfig;
-  const numPages = Math.ceil(result.data.allMarkdownRemark.totalCount / postsPerPage);
+  const {
+    articlesPerPage
+  } = siteConfig;
+  const numPages = Math.ceil(result.data.allMarkdownRemark.totalCount / articlesPerPage);
 
   for (let i = 0; i < numPages; i += 1) {
     createPage({
@@ -23,8 +25,8 @@ module.exports = async (graphql, actions) => {
       component: path.resolve('./src/templates/index-template.js'),
       context: {
         currentPage: i,
-        postsLimit: postsPerPage,
-        postsOffset: i * postsPerPage,
+        articleLimit: articlesPerPage,
+        articleOffset: i * articlesPerPage,
         prevPagePath: i <= 1 ? '/' : `/page/${i - 1}`,
         nextPagePath: `/page/${i + 1}`,
         hasPrevPage: i !== 0,
