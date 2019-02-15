@@ -55,6 +55,7 @@
     "gatsby-plugin-sass": "^2.0.10",
     "gatsby-plugin-sharp": "^2.0.20",
     "gatsby-plugin-sitemap": "^2.0.5",
+    "gatsby-prismjs-dracula": "^0.1.15",
     "gatsby-remark-copy-linked-files": "^2.0.9",
     "gatsby-remark-images": "^3.0.3",
     "gatsby-remark-prismjs": "^3.2.4",
