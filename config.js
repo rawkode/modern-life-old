@@ -5,7 +5,7 @@ module.exports = {
   title: 'Rawkode\'s Modern Life',
   subtitle: 'Software & Technology Professional; from Glasgow, Scotland.',
   copyright: '© All rights reserved.',
-  disqusShortname: 'rawkodes-modern-life',
+  disqusShortname: 'rawkode',
   articlesPerPage: 4,
   googleAnalyticsId: 'UA-21911324-1',
   menu: [
