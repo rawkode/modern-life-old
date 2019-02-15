@@ -1,38 +1,37 @@
 'use strict';
 
 module.exports = {
-  url: 'https://lumen.netlify.com',
-  title: 'Blog by John Doe',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+  url: 'https://rawkode.com',
+  title: 'Rawkode\'s Modern Life',
+  subtitle: 'Software & Technology Professional; from Glasgow, Scotland.',
   copyright: '© All rights reserved.',
-  disqusShortname: '',
+  disqusShortname: 'rawkodes-modern-life',
   articlesPerPage: 4,
-  googleAnalyticsId: 'UA-73379983-2',
+  googleAnalyticsId: 'UA-21911324-1',
   menu: [
     {
       label: 'Articles',
       path: '/'
     },
     {
-      label: 'About me',
-      path: '/pages/about'
+      label: 'About',
+      path: '/about'
     },
     {
-      label: 'Contact me',
-      path: '/pages/contacts'
+      label: 'Contact',
+      path: '/contact'
     }
   ],
   author: {
-    name: 'John Doe',
+    name: 'David McKay',
     photo: '/photo.jpg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    bio: 'Developer Advocate @InfluxData',
     contacts: {
-      email: '#',
-      telegram: '#',
-      twitter: '#',
-      github: '#',
+      email: 'rawkode@pm.me',
+      telegram: 'rawkode',
+      twitter: 'rawkode',
+      github: 'rawkode',
       rss: '#',
-      vkontakte: '#'
     }
   }
 };
