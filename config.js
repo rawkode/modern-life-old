@@ -32,6 +32,7 @@ module.exports = {
       twitter: 'rawkode',
       github: 'rawkode',
       rss: '#',
+      vkontakte: '#'
     }
   }
 };
